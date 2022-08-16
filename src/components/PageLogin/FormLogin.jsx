@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useNavigate } from "react-router-dom";
 import "./FormLogin.css"
 import { userLogin } from '../../services/axiosServices';
+import { Token } from '@mui/icons-material';
 
 
 export const FormLogin = () => {
@@ -19,14 +20,14 @@ export const FormLogin = () => {
     })
     if (response.status === "OK" && username != "" && password != "") {
       setIsLogged(() => true)
-      setToken(() => response.token)
-      localStorage.setItem("token", JSON.stringify(token))
+      //setToken(() => response.token)
+      localStorage.setItem("token",JSON.stringify(response.token))
       swal({
         title: "Entraste a la pagina",
         text: "clave",
         icon: "success",
       })
-      // navigate("/news")
+      navigate("/news")
     } else if (username === "" || password === "") {
       swal({
         title: "Error",
@@ -60,7 +61,7 @@ export const FormLogin = () => {
         <h1 className='titleLogin'>Iniciar sesion</h1>
         {isLogged ? (
           <p>Este es tu {token}</p>
-        ) : (
+          ) : (
           <form className='containerFormLogin'>
             <input className='imputLogin' type="text" name='username' placeholder='Usuario' required value={username} onChange={handleUsernameChange} />
             <input className='imputLogin' type="password" name='password' placeholder='Contraseña' required value={password} onChange={handlePasswordChange} />
