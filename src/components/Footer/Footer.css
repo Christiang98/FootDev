@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Odibee+Sans&family=Staatliches&display=swap');
+
+
+.containerSlogan{
+    margin-top:27px;
+    margin-left:15px;
+    font-size:20px ;
+    
+}
+.contenedor-footer-content {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Staatliches', cursive;
+    background: #90E0EF;
+    height:130px;
+}
+
+ .social-media {
+    display: flex;
+    gap:40px;
+    margin-top:10px;
+ } 
+ .social-media-icon{
+    color: #060E4A;
+    margin:4px;
+}
+.secondRedes{
+    margin-right:20px;
+    
+}
+.RedesAlexis {
+   font-size: 25px;
+}
+
+.RedesChris {
+   font-size: 25px;
+}
+
+.RedesLucas {
+    font-size: 25px;
+}
+
+.RedesWilliam {
+    font-size: 25px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .contenedor-footer-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Staatliches', cursive;
+    flex-wrap: wrap;
+    padding-top: 26px;
+    padding-bottom: 0px;
+    background: #AFE43E;
+    height:220px;
+}
+.social-media{
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+.social-media-icon{
+    display: flex;
+    margin-left: 20px;
+    width: 60px;
+    height: 60px;
+    border: 2px solid red;
+    border-radius: 50%; /*sacarlo*/
+/* text-align: center;
+    color: #060E4A;
+} */

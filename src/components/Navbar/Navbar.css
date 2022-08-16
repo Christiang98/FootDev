@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Odibee+Sans&family=Staatliches&display=swap');
+.textNavbar{
+    display: flex;
+    font-size:35px; 
+    margin-top:5px;
+    margin-left:15px;
+    font-family: 'Staatliches', cursive;
+}
+.menuNavbar{
+  display: flex;
+  margin-left:300px;
+}
+
+.iconNavbar{
+  width:60px;
+  margin-top: 10px;
+}
+
+.Agus{
+  text-decoration: none;
+  color: white;
+  font-size: 30px;
+
+}

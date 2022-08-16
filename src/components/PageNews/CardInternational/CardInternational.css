@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Odibee+Sans&family=Staatliches&display=swap');
+
+.titleSection{
+display: flex;
+margin-left: 10px;
+margin-top: 100px;
+}
+.logocard{
+    width:30px;
+}
+.iconInternational{
+    width: 96px;
+    margin: 0;
+    padding: 0;
+}
+.sectionInternational{
+    color: #050505;
+    font-size: 45px;
+    font-family: 'Staatliches', cursive;
+    margin-left: 15px;
+}

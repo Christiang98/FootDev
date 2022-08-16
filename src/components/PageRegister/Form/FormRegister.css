@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Odibee+Sans&family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Odibee+Sans&family=Staatliches&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+.logoRegister{
+    display: flex;
+    margin-top: 10px;
+}
+.titleLogo{
+  font-size:50px;
+  color: white;
+  font-family: 'Staatliches', cursive;
+  margin-left: 10px;
+}
+
+.imgLogo{
+width:60px;
+margin-left:15px;
+}
+
+.titleRegister {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size:80px;
+    margin-top: 3px;
+    color: #023047;
+    font-family: 'Staatliches', cursive;
+}
+
+.infoRegister {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
+    margin-top: 15px;
+    color: #023047;
+    font-family: 'Odibee Sans', cursive;
+}
+
+.containerForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 1400px;
+    height:450px;
+    margin-left: 100px;
+    gap: 10px;
+    margin-top:40px;
+
+}
+
+.imputRegister {
+    font-size:25px;
+    padding:13px;
+    width: 80%;
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0);
+    border: 2px solid #90E0EF;
+    font-family: 'Odibee Sans', cursive;
+    color:#353535;
+}
+
+.imputRegister::placeholder{
+    color:rgba(255, 255, 255, 0.8);
+}
+
+#buttonRegister
+ {
+    background-color:#264653;
+    color:white;
+    
+}
+
+#buttonRegister:hover {
+    background-color: #0077B6;
+    border:3px solid #90E0EF;
+    font-size: 23px;}
