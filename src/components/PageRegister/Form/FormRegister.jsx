@@ -71,7 +71,7 @@ export const FormRegister = () => {
           <input className='imputRegister' type="text" name='myClub' placeholder='Tu club' required value={myClub} onChange={handleMyClubChange} />
           <input className='imputRegister' type="email" name='email' placeholder='Email' required value={email} onChange={handleEmailChange} />
           <input className='imputRegister' type="password" name='password' placeholder='Contraseña' required value={password} onChange={handlePasswordChange} />
-          <button id="buttonRegister" className='imputRegister' type='submit' onClick={handleRegister}>Registrarse</button>
+          <button id="buttonRegister" className='imputRegister' type="submit" onClick={handleRegister}>Registrarse</button>
         </form>
       </div>
     </>

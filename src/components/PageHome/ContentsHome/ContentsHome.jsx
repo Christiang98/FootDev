@@ -16,9 +16,9 @@ export const ContentsHome = () => {
             <div className='containerLogoPageHome'>
                 <img src={Logo} className="logoPageHome" />
             </div>
-            <h3 className="sectionSubtitle"> Para todos los amantes del football les traemos la imformacion  y las mejores noticias de todas las ligas profesionales,
-                ligas internacionales , ligas europeas y ligas locales ..
-                Mas una seccion para armar tu equipo</h3>
+            <h3 className="sectionSubtitle"> Para todos los amantes del futbol les traemos la imformacion  y las mejores noticias de todas las ligas profesionales,
+                ligas internacionales y ligas locales ..
+                Mas una seccion en la que veras a los mejores equipos.</h3>
             <div className="containerIcons">
                 <img className='iconChampions' src={champions}/>
                 <img className='iconLibertadores' src={libertadores} />
@@ -27,7 +27,7 @@ export const ContentsHome = () => {
             </div>
             <div className="containerButtons">
                <NavLink to="/register"><button className="ButtonHomeRegister"> Registrate</button></NavLink>
-               <NavLink to="/register"><button className="ButtonHomeLogin">login</button></NavLink>
+               <NavLink to="/login"><button className="ButtonHomeLogin">login</button></NavLink>
             </div>
         </div>
         </>

@@ -28,12 +28,11 @@ export default function Navbar() {
                 </Typography>
                 <h1 className='textNavbar'>Footdev</h1>
                 <Tabs className='menuNavbar'>
-                    <NavLink to="/" className="navLink"><Tab style={{ color: "white", fontSize: "30px" }} label="Inicio" /></NavLink>
                     <NavLink to="/news" className="navLink"><Tab style={{ color: "white", fontSize: "30px" }} label="Noticias" /></NavLink>
-                    <NavLink to="/feedback" className="navLink"><Tab style={{ color: "white", fontSize: "30px" }} label="Contacto" /></NavLink>
                     <NavLink to="/teams" className="navLink"><Tab style={{ color: "white", fontSize: "30px" }} label="Equipos" /></NavLink>
+                    <NavLink to="/feedback" className="navLink"><Tab style={{ color: "white", fontSize: "30px" }} label="Contacto" /></NavLink>
                 </Tabs>
-                <Button sx={{ bgcolor: teal[800], color: "white", marginLeft: 30, padding: 2, width: 120, borderRadius: 5, fontSize: 20 }}onClick={exitPage}>salir</Button>
+                <Button sx={{ bgcolor: teal[800], color: "white", marginLeft:45, padding: 2, width: 120, borderRadius: 5, fontSize: 20 }}onClick={exitPage}>salir</Button>
             </Toolbar>
         </AppBar>
 

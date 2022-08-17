@@ -57,8 +57,8 @@
 .inputFeedback {
     font-size: 45px;
     padding: 13px;
-    width: 1000px;
-    height: 200px;
+    width:1400px;
+    height:100px;
     border-radius: 15px;
     background-color: rgba(0, 0, 0, 0);
     border: 2px solid #90E0EF;
@@ -70,7 +70,7 @@
     color: rgba(255, 255, 255, 0.5);
 }
 
-.summitFeedback {
+.submitFeedback {
     background-color: #264653;
     color: white;
     height: 50px;
