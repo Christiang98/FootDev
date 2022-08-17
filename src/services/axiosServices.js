@@ -15,3 +15,14 @@ export const userRegister = async (data) => {
         .catch((err) => err.response.data)
     return response
 }
+
+// export const makePut = async (data) => {
+//     const response = axios
+//         .get(`localhost:5000/api/people/${userId}`, data{
+//             headers: {
+//                 "Authorization":`Bearer $(window.localStorage.getItem("t))`
+//            }
+//         }).then((res) => console.log / res.data)
+//         .catch((err) => err.response.data)
+//     return response
+// } 

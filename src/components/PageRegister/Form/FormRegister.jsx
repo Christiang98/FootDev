@@ -60,7 +60,7 @@ export const FormRegister = () => {
       <div className='containerPageRegister'>
         <div className='logoRegister'>
           <img className='imgLogo' src={Logo} />
-          <h3 className='titleLogo'>FootDev</h3>
+          <h3 className='titleLogoRegister'>FootDev</h3>
         </div>
         <h1 className='titleRegister'>Registrate</h1>
         <p className='infoRegister'>Registrate para poder disfrutar de todo nuestro contenido</p>

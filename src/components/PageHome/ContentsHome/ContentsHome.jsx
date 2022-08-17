@@ -25,8 +25,9 @@ export const ContentsHome = () => {
                 <img className='iconInternational' src={futbolInternacional}/>
                 <img className='iconLocal' src={futbolNacional} />
             </div>
-            <div className="containerButton">
-               <NavLink to="/register"><button className="PageButton"> Registrate</button></NavLink>
+            <div className="containerButtons">
+               <NavLink to="/register"><button className="ButtonHomeRegister"> Registrate</button></NavLink>
+               <NavLink to="/register"><button className="ButtonHomeLogin">login</button></NavLink>
             </div>
         </div>
         </>

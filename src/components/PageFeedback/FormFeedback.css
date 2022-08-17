@@ -6,17 +6,16 @@
 }
 
 
-.logoLogin {
+.logoFeedback {
     display: flex;
     margin-top: 10px;
 }
 
-.titleLogoLogin {
-    font-size: 50px;
+.titleLogo {
+    font-size: 1px;
     color: white;
     font-family: 'Staatliches', cursive;
     margin-left: 10px;
-    margin-top: 5px;
 }
 
 .imgLogo {
@@ -24,17 +23,27 @@
     margin-left: 15px;
 }
 
-.titleLogin {
+.titleFeedback {
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 80px;
-    margin-top: 1px;
-    color:#023047;
+    margin-top:15px;
+    color: #90E0EF;
     font-family: 'Staatliches', cursive;
+    
+}
+.text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 35px;
+    margin-top: 15px;
+    color: #023047;
+    font-family: 'Odibee Sans', cursive;
 }
 
-.containerFormLogin{
+.containerFormFeedback{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -45,27 +54,31 @@
     gap: 10px;
 }
 
-.imputLogin {
-    font-size: 17px;
+.inputFeedback {
+    font-size: 45px;
     padding: 13px;
-    width: 80%;
+    width: 1000px;
+    height: 200px;
     border-radius: 15px;
     background-color: rgba(0, 0, 0, 0);
     border: 2px solid #90E0EF;
     font-family: 'Staatliches', cursive;
-    color: #353535;
+    color: #e9d8a6;
 }
 
-.imputLogin::placeholder{
-    color:rgba(255, 255, 255, 0.8);
+::placeholder {
+    color: rgba(255, 255, 255, 0.5);
 }
 
-#buttonLogin {
+.summitFeedback {
     background-color: #264653;
     color: white;
+    height: 50px;
+    width: 250px;
+    font-size: 23px;
 }
 
-#buttonLogin:hover {
+.summitFeedback:hover {
     background-color: #0077B6;
     border: 3px solid #90E0EF;
     font-size: 23px;

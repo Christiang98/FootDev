@@ -8,11 +8,12 @@
     display: flex;
     margin-top: 10px;
 }
-.titleLogo{
+.titleLogoRegister{
   font-size:50px;
   color: white;
   font-family: 'Staatliches', cursive;
   margin-left: 10px;
+  margin-top:5px;
 }
 
 .imgLogo{

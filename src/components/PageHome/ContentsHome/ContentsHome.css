@@ -75,17 +75,43 @@
     margin-right: 100px;
 }
 
-.containerButton {
+.containerButtons {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 10px;
+   margin-top: 25px;
+   margin-bottom: 25px;
+    gap:120px;
+    
 }
 
-.PageButton {
-    padding: 20px;
-    font-size: 20px;
+.ButtonHomeRegister {
+    padding:25px;
+    width:170px;
+    font-size:25px;
     border-radius: 35px;
     font-family: 'Staatliches', cursive;
-    margin-top:50px;
+    background-color:#0EAD69;
+    color:black;
+
+    
 }
+
+.ButtonHomeLogin {
+    padding: 25px;
+    width:170px;
+    font-size:25px;
+    border-radius: 35px;
+    font-family: 'Staatliches', cursive;
+    background-color:#FDF0D5;
+    
+}
+
+.ButtonHomeLogin:hover{
+color:#FDF0D5;
+background-color: black;
+}
+.ButtonHomeRegister:hover{
+    color:#0EAD69;
+    background-color: black;
+    }

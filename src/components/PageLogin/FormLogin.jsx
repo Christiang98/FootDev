@@ -2,7 +2,8 @@ import React, { useState } from 'react'
 import { useNavigate } from "react-router-dom";
 import "./FormLogin.css"
 import { userLogin } from '../../services/axiosServices';
-import { Token } from '@mui/icons-material';
+import Logo from "../../assets/img/Logo.png"
+
 
 
 export const FormLogin = () => {
@@ -20,7 +21,6 @@ export const FormLogin = () => {
     })
     if (response.status === "OK" && username != "" && password != "") {
       setIsLogged(() => true)
-      //setToken(() => response.token)
       localStorage.setItem("token",JSON.stringify(response.token))
       swal({
         title: "Entraste a la pagina",
@@ -55,18 +55,15 @@ export const FormLogin = () => {
     <>
       <div>
         <div className='logoLogin'>
-          <img className='imgLogo' src="https://i.postimg.cc/jqH6qFZx/ballch.png" />
-          <h3 className='titleLogo'>FootDev</h3>
+          <img className='imgLogo' src={Logo} />
+          <h3 className='titleLogoLogin'>FootDev</h3>
         </div>
         <h1 className='titleLogin'>Iniciar sesion</h1>
-        {isLogged ? (
-          <p>Este es tu {token}</p>
-          ) : (
-          <form className='containerFormLogin'>
+        <form className='containerFormLogin'>
             <input className='imputLogin' type="text" name='username' placeholder='Usuario' required value={username} onChange={handleUsernameChange} />
             <input className='imputLogin' type="password" name='password' placeholder='Contraseña' required value={password} onChange={handlePasswordChange} />
             <button id="buttonLogin" className='imputLogin' type='submit' onClick={handleLogin}>Ingresa</button>
-          </form>)}
+          </form>
       </div>
     </>
   )
