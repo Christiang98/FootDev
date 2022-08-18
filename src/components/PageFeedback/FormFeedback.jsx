@@ -10,7 +10,7 @@ export const FormFeedback = () => {
           <h3 className='titleLogo'>FootDev</h3>
         </div>
         <h1 className='titleFeedback'>Necesitamos tu Feedback</h1>
-        <h2 className="text">¿Encontraste un error? ¿Tenes una sugerencia? Nos interesa tu opinion, por favor dejalas en este formulario asi podemos mejorar!</h2>
+        <h2 className="text"> Nos gustaría conocer tu opinión sobre Footdev .. Contanos en el siguiente formulario que te gustaría encontrar, mejorar o añadir a nuestra pagina.</h2>
         <form action="https://formsubmit.co/chrisu9855@gmail.com" method="POST" target="_blank" className="containerFormFeedback">
           <input className="inputFeedback" type="text" name="Sugerir seccion" placeholder="Sugerir seccion"  required></input>
           <input className="inputFeedback" type="text" name="Sugerir club" placeholder="Sugerir club"required></input>
