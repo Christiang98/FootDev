@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
 import CardMedia from '@mui/material/CardMedia';
@@ -14,6 +14,29 @@ import "./CardLibertadores.css"
 
 
 export default function CardLibertadores() {
+    const [fav5, setFav5] = useState("false")
+    const [fav6, setFav6] = useState("false")
+    const [fav7, setFav7] = useState("false")
+    const [fav8, setFav8] = useState("false")
+
+    const iconFav5 = () => {
+        setFav5((prev) => !prev)
+
+    }
+    const iconFav6 = () => {
+        setFav6((prev) => !prev)
+
+    }
+    const iconFav7 = () => {
+        setFav7((prev) => !prev)
+
+    }
+    const iconFav8 = () => {
+        setFav8((prev) => !prev)
+
+    }
+
+
     return (
         <>
             <div className='titleSection'>
@@ -45,8 +68,8 @@ export default function CardLibertadores() {
                             A finales de mayo, Alexander Medina firmó contrato con Vélez para convertirse en el nuevo entrenador del club. Y a dos meses y medio de aquella primera foto oficial, la dirigencia y los hinchas celebran su llegada con el pase a las semifinales de la Copa Libertadores. Tras haber eliminado a River y a Talleres, ahora tendrán un nuevo desafío: Flamengo. Sin embargo, desde el cuerpo técnico aseguran que no es imposible a pesar del Dream Team que tienen los brasileños.
                         </Typography>
                     </CardContent>
-                    <IconButton aria-label="add to favorites">
-                        <FavoriteIcon sx={{ marginTop:2, fontSize: 35 }} />
+                    <IconButton aria-label="add to favorites" onClick={iconFav5}>
+                        <FavoriteIcon sx={{ marginTop: 2, fontSize: 35 }} color={fav5 ? "default" : "error"} />
                     </IconButton>
                 </Card>
                 {/* FIRST CARD */}
@@ -73,8 +96,8 @@ export default function CardLibertadores() {
                             Tal como en el duelo de ida en Curitiba, se dio otro partido friccionado, trabajado y luchado en el que los arqueros Bento y Andújar trabajaron para sostener su valla invicta y que se terminó resolviendo en los instantes finales. A los 90+6', los dos jóvenes delanteros brasileños que hizo ingresar el entrenador Luiz Felipe Scolari en el segundo tiempo resolvieron el partido: Vitor Roque conectó un centro de Vitinho desde la derecha y estampó, de cabeza, el 1-0 para sentenciar el pase del Furacão a la próxima ronda.
                         </Typography>
                     </CardContent>
-                    <IconButton aria-label="add to favorites">
-                        <FavoriteIcon sx={{fontSize: 35 }}/>
+                    <IconButton aria-label="add to favorites" onClick={iconFav6}>
+                        <FavoriteIcon sx={{ fontSize: 35 }} color={fav6 ? "default" : "error"} />
                     </IconButton>
                 </Card>
                 {/* SECOND CARD */}
@@ -101,8 +124,8 @@ export default function CardLibertadores() {
                             La CONMEBOL Libertadores entra en su etapa decisiva y este miércoles se definieron dos semifinalistas en dos emotivos partidos: Palmeiras y Vélez se metieron entre los 4 mejores del continente. Los bicampeones vigentes derrotaron por penales a Atlético Mineiro tras terminar el partido con 9 hombres, mientras que los argentinos vencieron 1-0 a Talleres, en Córdoba, y avanzaron..
                         </Typography>
                     </CardContent>
-                    <IconButton aria-label="add to favorites">
-                        <FavoriteIcon sx={{ marginTop:7, fontSize: 35 }}/>
+                    <IconButton aria-label="add to favorites" onClick={iconFav7}>
+                        <FavoriteIcon sx={{ marginTop: 7, fontSize: 35 }} color={fav7 ? "default" : "error"} />
                     </IconButton>
                 </Card>
                 {/* THIRD CARD */}
@@ -130,9 +153,9 @@ export default function CardLibertadores() {
                             Flamengo, campeón en 2019 y finalista en 2021, jugará su tercera semifinal en los últimos 4 años.
                         </Typography>
                     </CardContent>
-                        <IconButton aria-label="add to favorites">
-                            <FavoriteIcon sx={{fontSize: 35}}/>
-                        </IconButton>
+                    <IconButton aria-label="add to favorites" onClick={iconFav8}>
+                        <FavoriteIcon sx={{ fontSize: 35 }} color={fav8 ? "default" : "error"} />
+                    </IconButton>
                 </Card>
                 {/* CUARTA CARTA */}
             </div>

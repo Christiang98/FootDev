@@ -1,23 +1,44 @@
-import * as React from 'react';
-import { styled } from '@mui/material/styles';
+import React, { useState } from 'react';
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
 import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
-import CardActions from '@mui/material/CardActions';
-import Collapse from '@mui/material/Collapse';
 import Avatar from '@mui/material/Avatar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import { green, red } from '@mui/material/colors';
 import FavoriteIcon from '@mui/icons-material/Favorite';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import champions from "../../../assets/img/champions.png"
 import Logo from "../../../assets/img/Logo.png"
 import "./CardChampions.css";
 
 
 export default function CardChampions() {
+  const [fav, setFav] = useState("false")
+  const [fav2, setFav2] = useState("false")
+  const [fav3, setFav3] = useState("false")
+  const [fav4, setFav4] = useState("false")
+
+  const iconFav = () => {
+    setFav((prev) => !prev)
+
+  }
+  const iconFav2 = () => {
+    setFav2((prev) => !prev)
+
+  }
+  const iconFav3 = () => {
+    setFav3((prev) => !prev)
+
+  }
+  const iconFav4 = () => {
+    setFav4((prev) => !prev)
+
+  }
+  
+
+  
+
   return (
     <>
       <h1 className='titleCardsNews'>Ultimas noticias</h1>
@@ -53,8 +74,8 @@ export default function CardChampions() {
               en la lucha por conquistar la próxima Champions.
             </Typography>
           </CardContent>
-          <IconButton aria-label="add to favorites">
-            <FavoriteIcon sx={{ marginTop: 16, fontSize: 35 }} />
+          <IconButton aria-label="add to favorites" onClick={iconFav}>
+            <FavoriteIcon sx={{ marginTop: 16, fontSize: 35, }} color={fav ? "default" : "error"} />
           </IconButton>
         </Card>
         {/* FIRST CARD */}
@@ -82,8 +103,8 @@ export default function CardChampions() {
               La UEFA trabaja estrechamente con los clubes y los respectivos operadores al cargo de la producción televisiva para ofrecer la configuración del VAR. Cada equipo de árbitros asistentes de vídeo designado estará también en la sede en una sala de operaciones de vídeo específica.
             </Typography>
           </CardContent>
-          <IconButton aria-label="add to favorites">
-            <FavoriteIcon sx={{ marginTop: 6, fontSize: 35 }} />
+          <IconButton aria-label="add to favorites" onClick={iconFav2}>
+            <FavoriteIcon sx={{ marginTop: 6, fontSize: 35 }} color={fav2 ? "default" : "error"}/>
           </IconButton>
         </Card>
         {/* SECOND CARD */}
@@ -111,8 +132,8 @@ export default function CardChampions() {
               Habrá una única tabla de posiciones. Los ochos primeros equipos al término de la primera fase se clasificarán a octavos de final, mientras que los que ocupen los puestos del 9 al 24 pasarán por un repechaje con el formato de eliminatoria con partidos de ida y vuelta.
             </Typography>
           </CardContent>
-          <IconButton aria-label="add to favorites">
-            <FavoriteIcon sx={{ marginTop: 1, fontSize: 35 }} />
+          <IconButton aria-label="add to favorites" onClick={iconFav3}>
+            <FavoriteIcon sx={{ marginTop: 1, fontSize: 35 }}  color={fav3 ? "default" : "error"}/>
           </IconButton>
         </Card>
         {/* THIRD CARD */}
@@ -140,8 +161,8 @@ export default function CardChampions() {
               La tecnología, según NA, permite establecer en todo momento la posición de los jugadores y del balón, facilitando la detención de las jugadas en fuera de juego, sin reemplazar la apreciación de los árbitros.
             </Typography>
           </CardContent>
-          <IconButton aria-label="add to favorites">
-            <FavoriteIcon sx={{ marginBottom: 1, fontSize: 35 }} />
+          <IconButton aria-label="add to favorites" onClick={iconFav4}>
+            <FavoriteIcon sx={{ marginBottom: 1, fontSize: 35 }}  color={fav4 ? "default" : "error"}/>
           </IconButton>
         </Card>
         {/* CUARTA CARTA */}

@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
 import CardMedia from '@mui/material/CardMedia';
@@ -13,6 +13,29 @@ import futbolNacional from "../../../assets/img/futbolNacional.png"
 import "./CardLocal.css"
 
 export default function CardLocal() {
+    const [fav13, setFav13] = useState("false")
+    const [fav14, setFav14] = useState("false")
+    const [fav15, setFav15] = useState("false")
+    const [fav16, setFav16] = useState("false")
+
+    const iconFav13 = () => {
+        setFav13((prev) => !prev)
+
+    }
+    const iconFav14 = () => {
+        setFav14((prev) => !prev)
+
+    }
+    const iconFav15 = () => {
+        setFav15((prev) => !prev)
+
+    }
+    const iconFav16 = () => {
+        setFav16((prev) => !prev)
+
+    }   
+    
+    
     return (
         <>
             <div className='titleSection'>
@@ -43,8 +66,8 @@ export default function CardLocal() {
                             Como hizo en más de una ocasión en Colo-Colo (convirtió 10 tantos), Solari le dedicó los gritos de gol a su abuelo materno, Feliciano, de extensa carrera militar. El jugador de 21 años lo llegó a conocer por poco, ya que falleció cuando él era muy chico, pero nunca dejaron de contarle cosas. De grande, y ante un Monumental repleto, lo sigue homenajeando.
                         </Typography>
                     </CardContent>
-                    <IconButton aria-label="add to favorites">
-                        <FavoriteIcon sx={{fontSize: 35}} />
+                    <IconButton aria-label="add to favorites" onClick={iconFav13}>
+                        <FavoriteIcon sx={{fontSize: 35}}  color={fav13 ? "default" : "error"}/>
                     </IconButton>
                 </Card>
                 {/* FIRST CARD */}
@@ -71,8 +94,8 @@ export default function CardLocal() {
                             Es como si el tiempo se hubiera detenido para Darío Benedetto después de lo que vivió ante Corinthians y Talleres con la polémica arenga, los tres penales fallados y la eliminación de Boca de la Copa Libertadores. Una lesión en un tobillo lo tuvo a maltraer y nunca le permitió dejar atrás todo eso dentro de la cancha.
                         </Typography>
                     </CardContent>
-                    <IconButton aria-label="add to favorites">
-                        <FavoriteIcon sx={{fontSize: 35}}/>
+                    <IconButton aria-label="add to favorites" onClick={iconFav14}>
+                        <FavoriteIcon sx={{fontSize: 35}}  color={fav14 ? "default" : "error"}/>
                     </IconButton>
                 </Card>
                 {/* SECOND CARD */}
@@ -99,8 +122,8 @@ export default function CardLocal() {
                             Tengo mucha bronca, estoy esperando que alguien me dé una explicación de lo que pasó”, fue la contundente frase que soltó el zaguero de 24 años, que en reiteradas ocasiones ya había dejado en claro que es hincha del conjunto de La Ribera y su deseo es jugar allí.
                         </Typography>
                     </CardContent>
-                    <IconButton aria-label="add to favorites">
-                        <FavoriteIcon sx={{fontSize: 35,marginTop:2}}/>
+                    <IconButton aria-label="add to favorites" onClick={iconFav15}>
+                        <FavoriteIcon sx={{fontSize: 35,marginTop:2}}  color={fav15 ? "default" : "error"}/>
                     </IconButton>
                 </Card>
                 {/* THIRD CARD */}
@@ -126,8 +149,8 @@ export default function CardLocal() {
                             Zárate, de penal, fue el encargado de poner el 1-1 transitorio de Platense ante Banfield y en vez de festejar, el delantero corrió directo a buscar a un hincha del Calamar. Pero no quedó ahí, debido a que después del segundo tanto, que hizo Jorge Benítez, volvió a dedicarle el tanto al simpatizante.
                         </Typography>
                     </CardContent>
-                    <IconButton aria-label="add to favorites">
-                        <FavoriteIcon sx={{fontSize: 35,marginTop:2}}/>
+                    <IconButton aria-label="add to favorites" onClick={iconFav16}>
+                        <FavoriteIcon sx={{fontSize: 35,marginTop:2}}  color={fav16 ? "default" : "error"}/>
                     </IconButton>
                 </Card>
                 {/* CUARTA CARTA */}

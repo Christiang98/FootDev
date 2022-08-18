@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
 import CardMedia from '@mui/material/CardMedia';
@@ -14,6 +14,27 @@ import "./CardInternational.css"
 
 
 export default function CardInternational() {
+    const [fav9, setFav9] = useState("false")
+    const [fav10, setFav10] = useState("false")
+    const [fav11, setFav11] = useState("false")
+    const [fav12, setFav12] = useState("false")
+
+    const iconFav9 = () => {
+        setFav9((prev) => !prev)
+
+    }
+    const iconFav10 = () => {
+        setFav10((prev) => !prev)
+
+    }
+    const iconFav11 = () => {
+        setFav11((prev) => !prev)
+
+    }
+    const iconFav12 = () => {
+        setFav12((prev) => !prev)
+
+    }
     return (
         <>
             <div className='titleSection'>
@@ -44,8 +65,8 @@ export default function CardInternational() {
                             El Milan de Stefano Pioli, vigente campeón de la Serie A italiana, inició la defensa del ‘Scudetto’ superando (4-2) al Udinese en un partido loco que decidieron Brahim Díaz, autor del tercer gol, asistente en el cuarto y MVP indiscutible de la tarde, y el croata Ante Rebic, con un doblete.
                         </Typography>
                     </CardContent>
-                    <IconButton aria-label="add to favorites">
-                        <FavoriteIcon sx={{ marginTop:8, fontSize: 35 }} />
+                    <IconButton aria-label="add to favorites" onClick={iconFav9}>
+                        <FavoriteIcon sx={{ marginTop:8, fontSize: 35 }} color={fav9 ? "default" : "error"} />
                     </IconButton>
                 </Card>
                 {/* FIRST CARD */}
@@ -72,8 +93,8 @@ export default function CardInternational() {
                             Un gol de Denzel Dumfries en el 95’ le dio al Inter de Milán un triunfo agónico (1-2) sobre el recién ascendido Lecce, que en su regreso a la Serie A tras siete años de ausencia vio como se le escapaba un valiosísimo punto sobre la bocina.
                         </Typography>
                     </CardContent>
-                    <IconButton aria-label="add to favorites">
-                        <FavoriteIcon sx={{ marginTop: 10, fontSize: 35 }} />
+                    <IconButton aria-label="add to favorites" onClick={iconFav10}>
+                        <FavoriteIcon sx={{ marginTop: 10, fontSize: 35 }} color={fav10 ? "default" : "error"} />
                     </IconButton>
                 </Card>
                 {/* SECOND CARD */}
@@ -100,8 +121,8 @@ export default function CardInternational() {
                             Neymar es otro. Ha mutado, tiene más compromiso, como si se hubiera dado cuenta que no quiere que la historia le recuerde como un gran futbolista que se quedó a medias. Su extraordinario inicio de temporada tuvo continuidad ante el Montpellier, autor de dos tantos que confirmaron su reconciliación con la afición. Reapareció Mbappé, que falló un penalti, poco trascendente en el contexto de un partido decidido por el brasileño, redondeado por el francés y por el debutante Renato Sanches (5-2).
                         </Typography>
                     </CardContent>
-                    <IconButton aria-label="add to favorites">
-                        <FavoriteIcon sx={{ fontSize: 35 }}/>
+                    <IconButton aria-label="add to favorites" onClick={iconFav11}>
+                        <FavoriteIcon sx={{ fontSize: 35 }} color={fav11 ? "default" : "error"}/>
                     </IconButton>
                 </Card>
                 {/* THIRD CARD */}
@@ -127,8 +148,8 @@ export default function CardInternational() {
                             El argentino Giovanni Siemone (27 años), todavía jugador del Hellas Verona, llegó este sábado a Nápoles para cerrar su traspaso por el conjunto napolitano. El ariete ya superó los exámenes médicos pertinentes y acudió a la ciudad deportiva del Nápoles para reunirse con la directiva y firmar su nuevo contrato.
                         </Typography>
                     </CardContent>
-                    <IconButton aria-label="add to favorites">
-                        <FavoriteIcon sx={{ marginTop:6, fontSize: 35 }}/>
+                    <IconButton aria-label="add to favorites" onClick={iconFav12}>
+                        <FavoriteIcon sx={{ marginTop:6, fontSize: 35 }} color={fav12 ? "default" : "error"}/>
                     </IconButton>
                 </Card>
                 {/* CUARTA CARTA */}
