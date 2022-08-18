@@ -63,7 +63,7 @@ export const FormRegister = () => {
           <h3 className='titleLogoRegister'>FootDev</h3>
         </div>
         <h1 className='titleRegister'>Registrate</h1>
-        <p className='infoRegister'>Registrate para poder disfrutar de todo nuestro contenido</p>
+        <p className='infoRegister'>Para poder disfrutar de todo nuestro contenido</p>
         <form className='containerForm'>
           <input className='imputRegister' type="text" name='name' placeholder='Nombre' required value={firstName} onChange={handleFirstNameChange} />
           <input className='imputRegister' type="text" name='lastName' placeholder='Apellido' required value={lastName} onChange={handleLastNameChange} />

@@ -12,6 +12,7 @@ export const FormLogin = () => {
   const [isLogged, setIsLogged] = useState(false)
   const [token, setToken] = useState("")
 
+
   const navigate = useNavigate();
 
   const handleLogin = async (event) => {
@@ -23,6 +24,9 @@ export const FormLogin = () => {
     if (response.status === "OK" && username != "" && password != "") {
       setIsLogged(() => true)
       localStorage.setItem("token",JSON.stringify(response.token))
+      localStorage.setItem("username", JSON.stringify(username))
+      
+      
       swal({
         title: "Entraste a la pagina",
         text: "clave",

@@ -1,41 +1,19 @@
 import * as React from 'react';
-import { styled } from '@mui/material/styles';
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
 import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
-import CardActions from '@mui/material/CardActions';
-import Collapse from '@mui/material/Collapse';
 import Avatar from '@mui/material/Avatar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import { green, red } from '@mui/material/colors';
 import FavoriteIcon from '@mui/icons-material/Favorite';
-import ShareIcon from '@mui/icons-material/Share';
-import AddToHomeScreenIcon from '@mui/icons-material/AddToHomeScreen';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import libertadores from "../../../assets/img/libertadores.png";
 import Logo from "../../../assets/img/Logo.png"
 import "./CardLibertadores.css"
 
 
-const ExpandMore = styled((props) => {
-    const { expand, ...other } = props;
-    return <IconButton {...other} />;
-})(({ theme, expand }) => ({
-    transform: !expand ? 'rotate(0deg)' : 'rotate(180deg)',
-    marginLeft: 'auto',
-    transition: theme.transitions.create('transform', {
-        duration: theme.transitions.duration.shortest,
-    }),
-}));
-
 export default function CardLibertadores() {
-    const [expanded, setExpanded] = React.useState(false);
-
-    const handleExpandClick = () => {
-        setExpanded(!expanded);
-    };
     return (
         <>
             <div className='titleSection'>
@@ -67,51 +45,9 @@ export default function CardLibertadores() {
                             A finales de mayo, Alexander Medina firmó contrato con Vélez para convertirse en el nuevo entrenador del club. Y a dos meses y medio de aquella primera foto oficial, la dirigencia y los hinchas celebran su llegada con el pase a las semifinales de la Copa Libertadores. Tras haber eliminado a River y a Talleres, ahora tendrán un nuevo desafío: Flamengo. Sin embargo, desde el cuerpo técnico aseguran que no es imposible a pesar del Dream Team que tienen los brasileños.
                         </Typography>
                     </CardContent>
-                    <CardActions disableSpacing>
-                        <IconButton aria-label="add to favorites">
-                            <FavoriteIcon />
-                        </IconButton>
-                        <IconButton aria-label="share">
-                            <AddToHomeScreenIcon />
-                        </IconButton>
-                        <ExpandMore
-                            expand={expanded}
-                            onClick={handleExpandClick}
-                            aria-expanded={expanded}
-                            aria-label="show more"
-                        >
-                            <ExpandMoreIcon />
-                        </ExpandMore>
-                    </CardActions>
-                    <Collapse in={expanded} timeout="auto" unmountOnExit>
-                        <CardContent>
-                            <Typography paragraph>Method:</Typography>
-                            <Typography paragraph>
-                                Heat 1/2 cup of the broth in a pot until simmering, add saffron and set
-                                aside for 10 minutes.
-                            </Typography>
-                            <Typography paragraph>
-                                Heat oil in a (14- to 16-inch) paella pan or a large, deep skillet over
-                                medium-high heat. Add chicken, shrimp and chorizo, and cook, stirring
-                                occasionally until lightly browned, 6 to 8 minutes. Transfer shrimp to a
-                                large plate and set aside, leaving chicken and chorizo in the pan. Add
-                                pimentón, bay leaves, garlic, tomatoes, onion, salt and pepper, and cook,
-                                stirring often until thickened and fragrant, about 10 minutes. Add
-                                saffron broth and remaining 4 1/2 cups chicken broth; bring to a boil.
-                            </Typography>
-                            <Typography paragraph>
-                                Add rice and stir very gently to distribute. Top with artichokes and
-                                peppers, and cook without stirring, until most of the liquid is absorbed,
-                                15 to 18 minutes. Reduce heat to medium-low, add reserved shrimp and
-                                mussels, tucking them down into the rice, and cook again without
-                                stirring, until mussels have opened and rice is just tender, 5 to 7
-                                minutes more. (Discard any mussels that don&apos;t open.)
-                            </Typography>
-                            <Typography>
-                                Set aside off of the heat to let rest for 10 minutes, and then serve.
-                            </Typography>
-                        </CardContent>
-                    </Collapse>
+                    <IconButton aria-label="add to favorites">
+                        <FavoriteIcon sx={{ marginTop:2, fontSize: 35 }} />
+                    </IconButton>
                 </Card>
                 {/* FIRST CARD */}
 
@@ -137,51 +73,9 @@ export default function CardLibertadores() {
                             Tal como en el duelo de ida en Curitiba, se dio otro partido friccionado, trabajado y luchado en el que los arqueros Bento y Andújar trabajaron para sostener su valla invicta y que se terminó resolviendo en los instantes finales. A los 90+6', los dos jóvenes delanteros brasileños que hizo ingresar el entrenador Luiz Felipe Scolari en el segundo tiempo resolvieron el partido: Vitor Roque conectó un centro de Vitinho desde la derecha y estampó, de cabeza, el 1-0 para sentenciar el pase del Furacão a la próxima ronda.
                         </Typography>
                     </CardContent>
-                    <CardActions disableSpacing>
-                        <IconButton aria-label="add to favorites">
-                            <FavoriteIcon />
-                        </IconButton>
-                        <IconButton aria-label="share">
-                            <ShareIcon />
-                        </IconButton>
-                        <ExpandMore
-                            expand={expanded}
-                            onClick={handleExpandClick}
-                            aria-expanded={expanded}
-                            aria-label="show more"
-                        >
-                            <ExpandMoreIcon />
-                        </ExpandMore>
-                    </CardActions>
-                    <Collapse in={expanded} timeout="auto" unmountOnExit>
-                        <CardContent>
-                            <Typography paragraph>Method:</Typography>
-                            <Typography paragraph>
-                                Heat 1/2 cup of the broth in a pot until simmering, add saffron and set
-                                aside for 10 minutes.
-                            </Typography>
-                            <Typography paragraph>
-                                Heat oil in a (14- to 16-inch) paella pan or a large, deep skillet over
-                                medium-high heat. Add chicken, shrimp and chorizo, and cook, stirring
-                                occasionally until lightly browned, 6 to 8 minutes. Transfer shrimp to a
-                                large plate and set aside, leaving chicken and chorizo in the pan. Add
-                                pimentón, bay leaves, garlic, tomatoes, onion, salt and pepper, and cook,
-                                stirring often until thickened and fragrant, about 10 minutes. Add
-                                saffron broth and remaining 4 1/2 cups chicken broth; bring to a boil.
-                            </Typography>
-                            <Typography paragraph>
-                                Add rice and stir very gently to distribute. Top with artichokes and
-                                peppers, and cook without stirring, until most of the liquid is absorbed,
-                                15 to 18 minutes. Reduce heat to medium-low, add reserved shrimp and
-                                mussels, tucking them down into the rice, and cook again without
-                                stirring, until mussels have opened and rice is just tender, 5 to 7
-                                minutes more. (Discard any mussels that don&apos;t open.)
-                            </Typography>
-                            <Typography>
-                                Set aside off of the heat to let rest for 10 minutes, and then serve.
-                            </Typography>
-                        </CardContent>
-                    </Collapse>
+                    <IconButton aria-label="add to favorites">
+                        <FavoriteIcon sx={{fontSize: 35 }}/>
+                    </IconButton>
                 </Card>
                 {/* SECOND CARD */}
 
@@ -207,51 +101,9 @@ export default function CardLibertadores() {
                             La CONMEBOL Libertadores entra en su etapa decisiva y este miércoles se definieron dos semifinalistas en dos emotivos partidos: Palmeiras y Vélez se metieron entre los 4 mejores del continente. Los bicampeones vigentes derrotaron por penales a Atlético Mineiro tras terminar el partido con 9 hombres, mientras que los argentinos vencieron 1-0 a Talleres, en Córdoba, y avanzaron..
                         </Typography>
                     </CardContent>
-                    <CardActions disableSpacing>
-                        <IconButton aria-label="add to favorites">
-                            <FavoriteIcon />
-                        </IconButton>
-                        <IconButton aria-label="share">
-                            <ShareIcon />
-                        </IconButton>
-                        <ExpandMore
-                            expand={expanded}
-                            onClick={handleExpandClick}
-                            aria-expanded={expanded}
-                            aria-label="show more"
-                        >
-                            <ExpandMoreIcon />
-                        </ExpandMore>
-                    </CardActions>
-                    <Collapse in={expanded} timeout="auto" unmountOnExit>
-                        <CardContent>
-                            <Typography paragraph>Method:</Typography>
-                            <Typography paragraph>
-                                Heat 1/2 cup of the broth in a pot until simmering, add saffron and set
-                                aside for 10 minutes.
-                            </Typography>
-                            <Typography paragraph>
-                                Heat oil in a (14- to 16-inch) paella pan or a large, deep skillet over
-                                medium-high heat. Add chicken, shrimp and chorizo, and cook, stirring
-                                occasionally until lightly browned, 6 to 8 minutes. Transfer shrimp to a
-                                large plate and set aside, leaving chicken and chorizo in the pan. Add
-                                pimentón, bay leaves, garlic, tomatoes, onion, salt and pepper, and cook,
-                                stirring often until thickened and fragrant, about 10 minutes. Add
-                                saffron broth and remaining 4 1/2 cups chicken broth; bring to a boil.
-                            </Typography>
-                            <Typography paragraph>
-                                Add rice and stir very gently to distribute. Top with artichokes and
-                                peppers, and cook without stirring, until most of the liquid is absorbed,
-                                15 to 18 minutes. Reduce heat to medium-low, add reserved shrimp and
-                                mussels, tucking them down into the rice, and cook again without
-                                stirring, until mussels have opened and rice is just tender, 5 to 7
-                                minutes more. (Discard any mussels that don&apos;t open.)
-                            </Typography>
-                            <Typography>
-                                Set aside off of the heat to let rest for 10 minutes, and then serve.
-                            </Typography>
-                        </CardContent>
-                    </Collapse>
+                    <IconButton aria-label="add to favorites">
+                        <FavoriteIcon sx={{ marginTop:7, fontSize: 35 }}/>
+                    </IconButton>
                 </Card>
                 {/* THIRD CARD */}
                 {/* CUARTA CARTA */}
@@ -278,51 +130,9 @@ export default function CardLibertadores() {
                             Flamengo, campeón en 2019 y finalista en 2021, jugará su tercera semifinal en los últimos 4 años.
                         </Typography>
                     </CardContent>
-                    <CardActions disableSpacing>
                         <IconButton aria-label="add to favorites">
-                            <FavoriteIcon />
+                            <FavoriteIcon sx={{fontSize: 35}}/>
                         </IconButton>
-                        <IconButton aria-label="share">
-                            <ShareIcon />
-                        </IconButton>
-                        <ExpandMore
-                            expand={expanded}
-                            onClick={handleExpandClick}
-                            aria-expanded={expanded}
-                            aria-label="show more"
-                        >
-                            <ExpandMoreIcon />
-                        </ExpandMore>
-                    </CardActions>
-                    <Collapse in={expanded} timeout="auto" unmountOnExit>
-                        <CardContent>
-                            <Typography paragraph>Method:</Typography>
-                            <Typography paragraph>
-                                Heat 1/2 cup of the broth in a pot until simmering, add saffron and set
-                                aside for 10 minutes.
-                            </Typography>
-                            <Typography paragraph>
-                                Heat oil in a (14- to 16-inch) paella pan or a large, deep skillet over
-                                medium-high heat. Add chicken, shrimp and chorizo, and cook, stirring
-                                occasionally until lightly browned, 6 to 8 minutes. Transfer shrimp to a
-                                large plate and set aside, leaving chicken and chorizo in the pan. Add
-                                pimentón, bay leaves, garlic, tomatoes, onion, salt and pepper, and cook,
-                                stirring often until thickened and fragrant, about 10 minutes. Add
-                                saffron broth and remaining 4 1/2 cups chicken broth; bring to a boil.
-                            </Typography>
-                            <Typography paragraph>
-                                Add rice and stir very gently to distribute. Top with artichokes and
-                                peppers, and cook without stirring, until most of the liquid is absorbed,
-                                15 to 18 minutes. Reduce heat to medium-low, add reserved shrimp and
-                                mussels, tucking them down into the rice, and cook again without
-                                stirring, until mussels have opened and rice is just tender, 5 to 7
-                                minutes more. (Discard any mussels that don&apos;t open.)
-                            </Typography>
-                            <Typography>
-                                Set aside off of the heat to let rest for 10 minutes, and then serve.
-                            </Typography>
-                        </CardContent>
-                    </Collapse>
                 </Card>
                 {/* CUARTA CARTA */}
             </div>

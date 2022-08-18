@@ -11,31 +11,13 @@ import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import { green, red } from '@mui/material/colors';
 import FavoriteIcon from '@mui/icons-material/Favorite';
-import ShareIcon from '@mui/icons-material/Share';
-import AddToHomeScreenIcon from '@mui/icons-material/AddToHomeScreen';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import champions from "../../../assets/img/champions.png"
 import Logo from "../../../assets/img/Logo.png"
 import "./CardChampions.css";
 
-const ExpandMore = styled((props) => {
-  const { expand, ...other } = props;
-  return <IconButton {...other} />;
-})(({ theme, expand }) => ({
-  transform: !expand ? 'rotate(0deg)' : 'rotate(180deg)',
-  marginLeft: 'auto',
-  transition: theme.transitions.create('transform', {
-    duration: theme.transitions.duration.shortest,
-  }),
-}));
 
 export default function CardChampions() {
-  const [expanded, setExpanded] = React.useState(false);
-
-  const handleExpandClick = () => {
-    setExpanded(!expanded);
-  };
-
   return (
     <>
       <h1 className='titleCardsNews'>Ultimas noticias</h1>
@@ -57,7 +39,7 @@ export default function CardChampions() {
             subheader="5 de Agosto de 2022"
           />
           <CardMedia
-           component="img"
+            component="img"
             height="260"
             image="https://img.asmedia.epimg.net/resizer/ARf9txUYhzgyWhxnn-PwiBawrz0=/736x414/cloudfront-eu-central-1.images.arcpublishing.com/diarioas/U2GF23DXQJYOPXRYBBZRQZU264.jpg"
             alt="Paella dish"
@@ -71,51 +53,9 @@ export default function CardChampions() {
               en la lucha por conquistar la próxima Champions.
             </Typography>
           </CardContent>
-          <CardActions disableSpacing>
-            <IconButton aria-label="add to favorites">
-              <FavoriteIcon />
-            </IconButton>
-            <IconButton aria-label="share">
-              <AddToHomeScreenIcon />
-            </IconButton>
-            <ExpandMore
-              expand={expanded}
-              onClick={handleExpandClick}
-              aria-expanded={expanded}
-              aria-label="show more"
-            >
-              <ExpandMoreIcon />
-            </ExpandMore>
-          </CardActions>
-          <Collapse in={expanded} timeout="auto" unmountOnExit>
-            <CardContent>
-              <Typography paragraph>Method:</Typography>
-              <Typography paragraph>
-                Heat 1/2 cup of the broth in a pot until simmering, add saffron and set
-                aside for 10 minutes.
-              </Typography>
-              <Typography paragraph>
-                Heat oil in a (14- to 16-inch) paella pan or a large, deep skillet over
-                medium-high heat. Add chicken, shrimp and chorizo, and cook, stirring
-                occasionally until lightly browned, 6 to 8 minutes. Transfer shrimp to a
-                large plate and set aside, leaving chicken and chorizo in the pan. Add
-                pimentón, bay leaves, garlic, tomatoes, onion, salt and pepper, and cook,
-                stirring often until thickened and fragrant, about 10 minutes. Add
-                saffron broth and remaining 4 1/2 cups chicken broth; bring to a boil.
-              </Typography>
-              <Typography paragraph>
-                Add rice and stir very gently to distribute. Top with artichokes and
-                peppers, and cook without stirring, until most of the liquid is absorbed,
-                15 to 18 minutes. Reduce heat to medium-low, add reserved shrimp and
-                mussels, tucking them down into the rice, and cook again without
-                stirring, until mussels have opened and rice is just tender, 5 to 7
-                minutes more. (Discard any mussels that don&apos;t open.)
-              </Typography>
-              <Typography>
-                Set aside off of the heat to let rest for 10 minutes, and then serve.
-              </Typography>
-            </CardContent>
-          </Collapse>
+          <IconButton aria-label="add to favorites">
+            <FavoriteIcon sx={{ marginTop: 16, fontSize: 35 }} />
+          </IconButton>
         </Card>
         {/* FIRST CARD */}
 
@@ -142,51 +82,9 @@ export default function CardChampions() {
               La UEFA trabaja estrechamente con los clubes y los respectivos operadores al cargo de la producción televisiva para ofrecer la configuración del VAR. Cada equipo de árbitros asistentes de vídeo designado estará también en la sede en una sala de operaciones de vídeo específica.
             </Typography>
           </CardContent>
-          <CardActions disableSpacing>
-            <IconButton aria-label="add to favorites">
-              <FavoriteIcon />
-            </IconButton>
-            <IconButton aria-label="share">
-              <ShareIcon />
-            </IconButton>
-            <ExpandMore
-              expand={expanded}
-              onClick={handleExpandClick}
-              aria-expanded={expanded}
-              aria-label="show more"
-            >
-              <ExpandMoreIcon />
-            </ExpandMore>
-          </CardActions>
-          <Collapse in={expanded} timeout="auto" unmountOnExit>
-            <CardContent>
-              <Typography paragraph>Method:</Typography>
-              <Typography paragraph>
-                Heat 1/2 cup of the broth in a pot until simmering, add saffron and set
-                aside for 10 minutes.
-              </Typography>
-              <Typography paragraph>
-                Heat oil in a (14- to 16-inch) paella pan or a large, deep skillet over
-                medium-high heat. Add chicken, shrimp and chorizo, and cook, stirring
-                occasionally until lightly browned, 6 to 8 minutes. Transfer shrimp to a
-                large plate and set aside, leaving chicken and chorizo in the pan. Add
-                pimentón, bay leaves, garlic, tomatoes, onion, salt and pepper, and cook,
-                stirring often until thickened and fragrant, about 10 minutes. Add
-                saffron broth and remaining 4 1/2 cups chicken broth; bring to a boil.
-              </Typography>
-              <Typography paragraph>
-                Add rice and stir very gently to distribute. Top with artichokes and
-                peppers, and cook without stirring, until most of the liquid is absorbed,
-                15 to 18 minutes. Reduce heat to medium-low, add reserved shrimp and
-                mussels, tucking them down into the rice, and cook again without
-                stirring, until mussels have opened and rice is just tender, 5 to 7
-                minutes more. (Discard any mussels that don&apos;t open.)
-              </Typography>
-              <Typography>
-                Set aside off of the heat to let rest for 10 minutes, and then serve.
-              </Typography>
-            </CardContent>
-          </Collapse>
+          <IconButton aria-label="add to favorites">
+            <FavoriteIcon sx={{ marginTop: 6, fontSize: 35 }} />
+          </IconButton>
         </Card>
         {/* SECOND CARD */}
 
@@ -214,10 +112,7 @@ export default function CardChampions() {
             </Typography>
           </CardContent>
           <IconButton aria-label="add to favorites">
-            <FavoriteIcon />
-          </IconButton>
-          <IconButton aria-label="share">
-            <ShareIcon />
+            <FavoriteIcon sx={{ marginTop: 1, fontSize: 35 }} />
           </IconButton>
         </Card>
         {/* THIRD CARD */}
@@ -245,56 +140,12 @@ export default function CardChampions() {
               La tecnología, según NA, permite establecer en todo momento la posición de los jugadores y del balón, facilitando la detención de las jugadas en fuera de juego, sin reemplazar la apreciación de los árbitros.
             </Typography>
           </CardContent>
-          <CardActions disableSpacing>
-            <IconButton aria-label="add to favorites">
-              <FavoriteIcon />
-            </IconButton>
-            <IconButton aria-label="share">
-              <ShareIcon />
-            </IconButton>
-            <ExpandMore
-              expand={expanded}
-              onClick={handleExpandClick}
-              aria-expanded={expanded}
-              aria-label="show more"
-            >
-              <ExpandMoreIcon />
-            </ExpandMore>
-          </CardActions>
-          <Collapse in={expanded} timeout="auto" unmountOnExit>
-            <CardContent>
-              <Typography paragraph>Method:</Typography>
-              <Typography paragraph>
-                Heat 1/2 cup of the broth in a pot until simmering, add saffron and set
-                aside for 10 minutes.
-              </Typography>
-              <Typography paragraph>
-                Heat oil in a (14- to 16-inch) paella pan or a large, deep skillet over
-                medium-high heat. Add chicken, shrimp and chorizo, and cook, stirring
-                occasionally until lightly browned, 6 to 8 minutes. Transfer shrimp to a
-                large plate and set aside, leaving chicken and chorizo in the pan. Add
-                pimentón, bay leaves, garlic, tomatoes, onion, salt and pepper, and cook,
-                stirring often until thickened and fragrant, about 10 minutes. Add
-                saffron broth and remaining 4 1/2 cups chicken broth; bring to a boil.
-              </Typography>
-              <Typography paragraph>
-                Add rice and stir very gently to distribute. Top with artichokes and
-                peppers, and cook without stirring, until most of the liquid is absorbed,
-                15 to 18 minutes. Reduce heat to medium-low, add reserved shrimp and
-                mussels, tucking them down into the rice, and cook again without
-                stirring, until mussels have opened and rice is just tender, 5 to 7
-                minutes more. (Discard any mussels that don&apos;t open.)
-              </Typography>
-              <Typography>
-                Set aside off of the heat to let rest for 10 minutes, and then serve.
-              </Typography>
-            </CardContent>
-          </Collapse>
+          <IconButton aria-label="add to favorites">
+            <FavoriteIcon sx={{ marginBottom: 1, fontSize: 35 }} />
+          </IconButton>
         </Card>
         {/* CUARTA CARTA */}
       </div>
-
-
     </>
   );
 }

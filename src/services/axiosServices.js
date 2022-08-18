@@ -1,5 +1,6 @@
 import axios from "axios"
 
+
 export const userLogin = async (data) => {
     const response = axios
         .post("http://localhost:5000/auth/login", data)
@@ -16,10 +17,3 @@ export const userRegister = async (data) => {
     return response
 }
 
-// export const switchData = async (data) => {
-//     const response = axios
-//         .get("http://localhost:5000/api/people", data)
-//         .then((res) => res.data)
-//         .catch((err) => err.response.data)
-//     return response
-// }
